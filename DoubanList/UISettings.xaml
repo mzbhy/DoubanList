@@ -1,0 +1,20 @@
+﻿<Window x:Class="DoubanList.UISettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DoubanList"
+        mc:Ignorable="d"
+        Title="UISettings" Height="140.431" Width="263.793"
+        Background="#B41E282C"
+        WindowStartupLocation="CenterScreen"
+		Loaded="Window_Loaded">
+    <Window.Resources>
+    </Window.Resources>
+    <Grid>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="96,35,0,0" VerticalAlignment="Top" Width="136" SelectionChanged="comboBox_SelectionChanged"  
+                DisplayMemberPath="Name"  
+                SelectedValuePath="ColorID"/>
+        <Label x:Name="label" Content="背景颜色" HorizontalAlignment="Left" Margin="33,33,0,0" VerticalAlignment="Top" Foreground="White"/>
+    </Grid>
+</Window>
