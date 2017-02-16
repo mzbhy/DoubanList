@@ -1,14 +1,16 @@
-﻿<Window x:Class="DoubanList.UISettings"
+﻿<Controls:MetroWindow x:Class="DoubanList.UISettings"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DoubanList"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
         Title="UISettings" Height="140.431" Width="263.793"
         Background="#B41E282C"
         WindowStartupLocation="CenterScreen"
-		Loaded="Window_Loaded">
+		Loaded="Window_Loaded"
+                      GlowBrush="{DynamicResource AccentColorBrush}">
     <Window.Resources>
     </Window.Resources>
     <Grid>
@@ -17,4 +19,4 @@
                 SelectedValuePath="ColorID"/>
         <Label x:Name="label" Content="背景颜色" HorizontalAlignment="Left" Margin="33,33,0,0" VerticalAlignment="Top" Foreground="White"/>
     </Grid>
-</Window>
+</Controls:MetroWindow>

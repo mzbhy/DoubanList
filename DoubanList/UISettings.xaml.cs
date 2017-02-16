@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Configuration;
+using MahApps.Metro.Controls;
 
 namespace DoubanList
 {
@@ -59,7 +60,7 @@ namespace DoubanList
     /// <summary>
     /// UISettings.xaml 的交互逻辑
     /// </summary>
-    public partial class UISettings : Window
+    public partial class UISettings : MetroWindow
     {
         public static List<WindowColor> MyWindowColor = new List<WindowColor>
         {

@@ -34,3 +34,16 @@ C:\Users\hasee\Desktop\My Projects\DoubanList\DoubanList\obj\Debug\UISettings.ba
 C:\Users\hasee\Desktop\My Projects\DoubanList\DoubanList\obj\Debug\DoubanList.g.resources
 C:\Users\hasee\Desktop\My Projects\DoubanList\DoubanList\obj\Debug\DoubanList.Properties.Resources.resources
 C:\Users\hasee\Desktop\My Projects\DoubanList\DoubanList\obj\Debug\DoubanList.csproj.GenerateResource.Cache
+C:\Users\hasee\Desktop\My Projects\DoubanList\DoubanList\bin\Debug\MahApps.Metro.dll
+C:\Users\hasee\Desktop\My Projects\DoubanList\DoubanList\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\hasee\Desktop\My Projects\DoubanList\DoubanList\bin\Debug\MahApps.Metro.pdb
+C:\Users\hasee\Desktop\My Projects\DoubanList\DoubanList\bin\Debug\MahApps.Metro.xml
+C:\Users\hasee\Desktop\My Projects\DoubanList\DoubanList\obj\Debug\App.baml
+C:\Users\hasee\Desktop\My Projects\DoubanList\DoubanList\bin\Debug\MahApps.Metro.IconPacks.dll
+C:\Users\hasee\Desktop\My Projects\DoubanList\DoubanList\bin\Debug\MahApps.Metro.IconPacks.pdb
+C:\Users\hasee\Desktop\My Projects\DoubanList\DoubanList\bin\Debug\MahApps.Metro.IconPacks.xml
+C:\Users\hasee\Desktop\My Projects\DoubanList\DoubanList\obj\Debug\Resources\Icons.baml
+C:\Users\hasee\Desktop\My Projects\DoubanList\DoubanList\obj\Debug\Resources\IconsNonShared.baml
+C:\Users\hasee\Desktop\My Projects\DoubanList\DoubanList\obj\Debug\WaitingProgress.g.cs
+C:\Users\hasee\Desktop\My Projects\DoubanList\DoubanList\obj\Debug\WaitingProgress.baml
+C:\Users\hasee\Desktop\My Projects\DoubanList\DoubanList\obj\Debug\GeneratedInternalTypeHelper.g.cs

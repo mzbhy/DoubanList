@@ -1,31 +1,34 @@
-﻿<Window x:Class="DoubanList.MainWindow"
+﻿<Controls:MetroWindow x:Class="DoubanList.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DoubanList"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1440"
+        Title="DoubanList" Height="720" Width="1440"
         xmlns:c="clr-namespace:DoubanList"
-        Background="#B41E282C"
-		AllowsTransparency="True"
-		WindowStyle="None"
+        
 		WindowStartupLocation="CenterScreen"
 		Loaded="Window_Loaded"
-        MouseLeftButtonDown="Window_MouseLeftButtonDown_1">
+        MouseLeftButtonDown="Window_MouseLeftButtonDown_1"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        GlowBrush="{DynamicResource AccentColorBrush}"
+        ResizeMode="CanResizeWithGrip"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:behaviours="http://metro.mahapps.com/winfx/xaml/shared" Closing="MetroWindow_Closing" TitleCaps="False">
+    <!--Background="#B41E282C"-->
 
     <Window.Resources>
-        <Style x:Key="ButtonStyle" TargetType="{x:Type Button}"/>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Icons.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Window.Resources>
 
-    <Grid x:Name="grid1" Width="1440" Height="720">
-
-        <Button Name="Button1" Style="{StaticResource ButtonStyle}" Click="CloseWindow" Width="20" Height="20" Content="X" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="3,3,3,3"></Button>
-        <Button x:Name="button" Content="测试" HorizontalAlignment="Left" Margin="540,75,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.5,0.5" Click="button_Click"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="43,73,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="400"/>
-        <Button x:Name="button1" Content="打开文件" HorizontalAlignment="Left" Margin="454,75,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click"/>
+    <Grid x:Name="grid1" Width="1440" Height="680">
         <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="499,221,0,0" VerticalAlignment="Top" Width="100"/>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="559" Margin="43,125,0,0" VerticalAlignment="Top" Width="1354" BorderThickness="6,1,1,1">
+        <ListBox x:Name="listBox" Height="559" Margin="43,83,43,0" BorderThickness="6,1,1,1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Left">
             <ListBox.Template>
                 <ControlTemplate TargetType="{x:Type ListBox}">
                     <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
@@ -33,11 +36,44 @@
                     </ScrollViewer>
                 </ControlTemplate>
             </ListBox.Template>
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel HorizontalAlignment="Center"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
         </ListBox>
-        <Button x:Name="button2" Content="界面设置" HorizontalAlignment="Left" Margin="626,75,0,0" VerticalAlignment="Top" Width="74" Click="button2_Click"/>
+        <!--实现换肤-->
+        <Popup x:Name="skinUI" Margin="0" PopupAnimation="Fade" PlacementTarget="{Binding ElementName=btnSkin}"
+               StaysOpen="False" SnapsToDevicePixels="True" ClipToBounds="True" AllowsTransparency="True" Placement="Left" VerticalOffset="25">
+            <Border x:Name="bdSkin" BorderBrush="{DynamicResource AccentColorBrush}" BorderThickness="1" 
+                    CornerRadius="8" Height="170" Width="450" RenderTransformOrigin="1.098,0.706">
+                <WrapPanel x:Name="skinPanel"/>
+            </Border>
+        </Popup>
+        <Canvas HorizontalAlignment="Left" Height="27" Margin="43,21,0,0" VerticalAlignment="Top" Width="984">
+            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="400" Canvas.Left="116"/>
+            <Button x:Name="button" Content="测试" HorizontalAlignment="Right" Width="75" RenderTransformOrigin="-10.12,0.519" Click="button_Click" Height="27" Margin="0" Canvas.Left="666"/>
+            <Button x:Name="button1" Content="打开文件" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="button1_Click" RenderTransformOrigin="6.827,-15.111" Margin="0" Canvas.Left="553"/>
+        </Canvas>
 
     </Grid>
 
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+            <Button x:Name="btnSkin">
+                <Rectangle Width="20" Height="20"
+                   Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+                    <Rectangle.OpacityMask>
+                        <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_clothes_shirt}" />
+                    </Rectangle.OpacityMask>
+                </Rectangle>
+                <Button.ToolTip>换肤</Button.ToolTip>
+            </Button>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
 
+    <i:Interaction.Behaviors>
+        <behaviours:BorderlessWindowBehavior />
+    </i:Interaction.Behaviors>
 
-</Window>
+</Controls:MetroWindow>
